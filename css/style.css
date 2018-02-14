@@ -727,7 +727,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   #fh5co-gallery-list li a .case-studies-summary h2 {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 #fh5co-gallery-list li.one-third {
@@ -1843,6 +1843,14 @@ form label {
 
 .js .animate-box {
   opacity: 0;
+}
+
+/* map style */
+#mapmarker{
+  position: inherit;
+  padding-left: 15px;
+  min-width: 200px;
+	height: 230px;
 }
 
 /*# sourceMappingURL=style.css.map */

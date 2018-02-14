@@ -72,6 +72,10 @@
 	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
 	<script type="text/javascript"> $youziku.load("#mainMenu", "cfe453bca1344abfa2aebf385ea9919b", "hdjxingshu"); $youziku.load("#fh5co-logo,.fh5co-heading,#coupleName", "cfe453bca1344abfa2aebf385ea9919b", "hdjxingshu"); $youziku.draw(); </script>
 
+	<!-- Map JS API -->
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.4&key=e38edce14b75f581a187c64f7e3d5865"></script>
+	<script src="//webapi.amap.com/ui/1.0/main.js"></script>
+
 </head>
 
 <body>
@@ -85,7 +89,7 @@
 					<div class="col-xs-4">
 						<div id="fh5co-logo">
 							<a href="index.html">
-								<img src="images/logo.png" alt="wedding" height="80" width="80"> 十年，刚好遇见你
+								<img src="images/logo.png" alt="wedding" height="80" width="80">
 							</a>
 						</div>
 					</div>
@@ -95,13 +99,13 @@
 								<a href="#">首页</a>
 							</li>
 							<li>
-							<a href="#fh5co-couple">我们的婚礼</a>
+								<a href="#fh5co-couple">我们的婚礼</a>
 							</li>
 							<li>
-							<a href="services.html">我们的故事</a>
+								<a href="services.html">我们的故事</a>
 							</li>
 							<li>
-							<a href="services.html">婚纱照</a>
+								<a href="services.html">婚纱照</a>
 							</li>
 							<li>
 								<a href="contact.html">联系我们</a>
@@ -121,7 +125,8 @@
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
 								<h1 id="coupleName">边俊恺 和 郦依洒</h1>
-								<h2>我们结婚啦!</h2>
+								<!-- <h2>十年，刚好遇见你</h2> -->
+								<h2 id="coupleName">我们结婚啦！</h2>
 								<div class="simply-countdown simply-countdown-one"></div>
 								<!-- <p>
 									<a href="#" class="btn btn-default btn-sm">Save the date</a>
@@ -180,34 +185,33 @@
 				<div class="row">
 					<div class="display-t">
 						<div class="display-tc">
-							<div class="col-md-12 col-md-offset-1">
-								<div class="col-md-4 col-sm-4 text-center">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="col-md-6 col-sm-6 text-center">
 									<div class="event-wrap animate-box">
 										<h3>婚礼晚宴</h3>
 										<div class="event-col">
 											<i class="icon-clock"></i>
 											<span>06:18 PM</span>
-											<span>08:00 PM</span>
+											<span>10:00 PM</span>
 										</div>
 										<div class="event-col">
 											<i class="icon-calendar"></i>
 											<span>2018年 3月</span>
 											<span>28日 星期三</span>
 										</div>
-										<p>杭州市西湖区北山路78号 杭州香格里拉饭店礼堂三楼宴会厅</p>
-										<p>温馨提示：酒店位于西湖景区，婚礼当天周三限行尾号为3、7的浙A车辆和非浙A车辆，请在16：30之前到达酒店</p>
+										<p>杭州市西湖区北山路78号</br>杭州香格里拉饭店礼堂三楼宴会厅</p>
+										<P>
+											<b>温馨提示：酒店位于西湖景区，婚礼当天尾号为3、7的浙A车辆和非浙A车辆，请在16：30之前到达酒店</b>
+										</p>
 									</div>
 								</div>
 								<div class="col-md-6 col-sm-6 text-center">
 									<div class="event-wrap animate-box">
-										<h3>酒店位置</h3>
-										<div class="event-col">
-											<iframe src="map.html" width="476" height="350" frameborder="0" scrolling="no"></iframe>
-										</div>
+										<h3>酒店地址</h3>
+										<div id="mapmarker"></div>
 									</div>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</div>
@@ -504,7 +508,8 @@
 							<div class="feature-copy">
 								<h3>We Organized Events</h3>
 								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto
-									culpa amet.</p>
+									culpa amet.
+								</p>
 							</div>
 						</div>
 
@@ -515,7 +520,8 @@
 							<div class="feature-copy">
 								<h3>Photoshoot</h3>
 								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto
-									culpa amet.</p>
+									culpa amet.
+								</p>
 							</div>
 						</div>
 
@@ -526,7 +532,8 @@
 							<div class="feature-copy">
 								<h3>Video Editing</h3>
 								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto
-									culpa amet.</p>
+									culpa amet.
+								</p>
 							</div>
 						</div>
 
@@ -650,20 +657,43 @@
 
 	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
 	<script src="js/simplyCountdown.js"></script>
+
+	<!-- Map -->
+	<!-- <script src="js/map.js"></script> -->
+
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
+
 	<script>
-		// default example
 		simplyCountdown('.simply-countdown-one');
 
-		//jQuery example
-		// $('#simply-countdown-losange').simplyCountdown({
-		// 	year: d.getFullYear(),
-		// 	month: d.getMonth() + 1,
-		// 	day: d.getDate(),
-		// 	enableUtc: false
-		// });
+	</script>
+
+	<script>
+
+		var map = new AMap.Map("mapmarker", {
+			resizeEnable: true,
+			center: [120.136795, 30.252487],
+			zoom: 16,
+			scrollWheel: false
+		});
+
+		var marker = new AMap.Marker({
+			position: [120.136795, 30.252487],
+			title: "杭州香格里拉饭店",
+			map: map
+
+		});
+
+		AMap.plugin(['AMap.ToolBar'],
+			function () {
+				var toolbar = new AMap.ToolBar({
+					liteStyle: true
+				});
+				map.addControl(toolbar);
+			});
+
 	</script>
 
 </body>
